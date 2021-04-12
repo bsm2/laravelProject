@@ -23,7 +23,8 @@ class registerController extends Controller
             'address'=>'required|max:30',
             'aboutme'=>'required|max:500|min:50'
         ]);
-        User::create($data);
+        $data['password'] = bcrypt($data['password']);
+        $op = User::create($data);
         return redirect('displayusers');
     }
 
