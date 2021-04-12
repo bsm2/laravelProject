@@ -2,8 +2,9 @@
 
 <h2>{{$category}}</h2> --}}
 
-@if ( strlen($title) >= 2)
-    <h1>{{$title}}</h1>
-@else
-    {{'invalid title'}}
-@endif
+@foreach ($cdata as $item)
+    <tr>
+        <td>{{$data['title']}}</td>
+        <td></td>
+    </tr>
+@endforeach

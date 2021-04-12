@@ -19,7 +19,10 @@ Route::get('/', function () {
 
 // Route::get('createblog','blogController@createblog');
 // Route::get('display/{title}/{category}','blogController@display');
-
+// Route::get('blogDetails','blogController@displayblog');
 //task
 Route::get('register','registerController@display');
 Route::post('storeUser','registerController@storeUser');
+Route::get('displayusers','registerController@displayUsers');
+Route::get('deleteuser/{id}','registerController@deleteUser');
+

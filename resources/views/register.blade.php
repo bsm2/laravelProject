@@ -33,18 +33,23 @@
             </div>
 
             <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="text" name="email" value="{{old('name')}}" class="form-control" id="exampleInputName" aria-describedby="" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
                 <label for="exampleInputEmail1">Age</label>
-                <input  name="age" value="{{old('age')}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter age">
+                <input  name="age" value="{{old('age')}}" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Enter age">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">phone</label>
-                <input  name="phone" value="{{old('phone')}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone">
+                <input  name="phone" value="{{old('phone')}}" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Enter phone">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">National ID</label>
-                <input  name="nationalid" value="{{old('anationalid')}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter id">
+                <input  name="nationalid" value="{{old('anationalid')}}" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Enter id">
             </div>
 
             <div class="form-group">
