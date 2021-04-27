@@ -39,4 +39,29 @@ class registerController extends Controller
         return redirect('displayusers');
         
     }
+
+    public function editUser(Request $request){
+        $id= $request->id;
+        $op = User::findOrFail($id);
+        return view('editeUser',['user_data'=>$op]);
+        
+    }
+
+    public function updateUser(Request $request){
+
+        $data = $this->validate(request(),[
+            'name'=>'max:10|min:2|regex:/^[a-zA-Z]*$/',
+            'email'=>'email',
+            'age'=>'max:200|numeric',
+            'phone'=>'numeric',
+            'nationalid'=>'numeric|digits:14',
+            'address'=>'max:30',
+            'aboutme'=>'max:500|min:50'
+        ]);
+        
+        $op = User::where('id',$request->id)->update($data);
+        return redirect('displayusers');
+    }
+
+
 }

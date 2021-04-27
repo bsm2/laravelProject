@@ -13,6 +13,12 @@
 <body>
 
     <div class="container">
+        <header>
+            <h1>{{ trans('site.users') }}</h1>
+    
+                <p> <a href="{{url('lang/ar')}}">ع</a></p>
+                <p> <a href="{{url('lang/en')}}">E</a> </p>
+        </header>
         <h1 >Users</h1>
         <br>
         <table class="table table-sm">
@@ -42,7 +48,7 @@
                         <td>{{$data->aboutme}}</td>
                         <td>
                             <a href='{{url('deleteuser/'.$data->id)}}' class="btn btn-danger">Delete</a>
-                            <a href="" class="btn btn-primary">Edit</a>
+                            <a href='{{url('editeuser/'.$data->id)}}' class="btn btn-primary">Edit</a>
                         </td>
                     </tr>
                 @endforeach

@@ -24,7 +24,7 @@
         </div>
     @endif
         <br>
-        <form method="post" action="{{url('storeUser')}}" enctype="multipart/form-data">
+        <form method="post" action="{{url('student')}}" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="id" value="">
             <div class="form-group">
@@ -34,38 +34,17 @@
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="text" name="email" value="{{old('email')}}" class="form-control" id="exampleInputName" aria-describedby="" placeholder="Enter email">
+                <input type="text" name="email" value="{{old('name')}}" class="form-control" id="exampleInputName" aria-describedby="" placeholder="Enter email">
             </div>
 
-            <div class="form-group">
-                <label for="exampleInputEmail1">Age</label>
-                <input  name="age" value="{{old('age')}}" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Enter age">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">phone</label>
-                <input  name="phone" value="{{old('phone')}}" class="form-control" id="" aria-describedby="" placeholder="Enter phone">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">National ID</label>
-                <input  name="nationalid" value="{{old('anationalid')}}" class="form-control" id="" aria-describedby="" placeholder="Enter id">
-            </div>
+           
 
             <div class="form-group">
                 <label for="exampleInputPassword1"> Password</label>
                 <input type="password" name="password" value="{{old('password')}}" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
 
-            <div class="form-group">
-                <label for="exampleInputPassword1">Adress</label>
-                <input type="text" name="address" value="{{old('address')}}" class="form-control" id="exampleInputPassword1" placeholder="address">
-            </div>
             
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1" class="form-label">About me</label>
-                <textarea type="text" class="form-control" name="aboutme" value="{{old('aboutme')}}" id="exampleFormControlTextarea1" rows="3">{{old('aboutme')}}</textarea>
-            </div>
 
             <button type="submit"  class="btn btn-primary">Submit</button>
 
